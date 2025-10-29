@@ -93,7 +93,8 @@ export const useMemos = () => {
   )
 
   // 메모 새로고침 (요약 후 업데이트용)
-  const refreshMemo = useCallback(async (id: string): Promise<void> => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const refreshMemo = useCallback(async (_id: string): Promise<void> => {
     try {
       const updatedMemos = await fetchMemos()
       setMemos(updatedMemos)
